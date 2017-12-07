@@ -9,10 +9,6 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <properties>
-    <commons.lang3.version>3.4</commons.lang3.version>
-  </properties>
-
   <groupId>com.streamsimple.shade</groupId>
   <artifactId>commons-lang3</artifactId>
   <version>3.4</version>
@@ -62,7 +58,8 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>${commons.lang3.version}</version>
+      <version>${project.version}</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>

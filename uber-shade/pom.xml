@@ -15,6 +15,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>ss-commons-io</module>
     <module>ss-commons-lang3</module>
     <module>ss-guava</module>
   </modules>
