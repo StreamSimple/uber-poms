@@ -42,6 +42,19 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.18</version>
+          <configuration>
+            <environmentVariables>
+              <java.testutils.build.dir>${project.build.directory}</java.testutils.build.dir>
+              <java.testutils.test.source>${project.build.testSourceDirectory}</java.testutils.test.source>
+              <projectbasedir>${pom.basedir}</projectbasedir>
+              <projectbuilddir>${project.basedir}</projectbuilddir>
+            </environmentVariables>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>2.17</version>
           <executions>
@@ -67,6 +80,51 @@
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
               <version>6.15</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>2.11</version>
+          <configuration>
+            <header>license/CopyrightHeader.txt</header>
+            <excludes>
+              <exclude>**/README</exclude>
+              <exclude>src/test/resources/*.csv</exclude>
+              <exclude>src/test/resources/*.xsd</exclude>
+              <exclude>src/test/resources/*.sh</exclude>
+              <exclude>src/main/resources/**/*.txt</exclude>
+              <exclude>**/*.json</exclude>
+              <exclude>**/*.md</exclude>
+              <exclude>**/*.yml</exclude>
+              <exclude>**/*.xml</exclude>
+              <exclude>**/*.properties</exclude>
+              <exclude>**/*.xsl</exclude>
+              <exclude>**/*.txt</exclude>
+              <exclude>**/*.html</exclude>
+              <exclude>**/*.sh</exclude>
+              <exclude>**/*.xsd</exclude>
+              <exclude>Dockerfile</exclude>
+            </excludes>
+            <mapping combine.children="append">
+              <java>SLASHSTAR_STYLE</java>
+              <R>SCRIPT_STYLE</R>
+            </mapping>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>verify</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>com.mycila</groupId>
+              <artifactId>license-maven-plugin-git</artifactId>
+              <version>2.11</version>
             </dependency>
           </dependencies>
         </plugin>
