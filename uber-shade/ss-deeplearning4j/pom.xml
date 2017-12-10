@@ -29,8 +29,9 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <createSourcesJar>true</createSourcesJar>
+              <createSourcesJar>false</createSourcesJar>
               <shadeSourcesContent>true</shadeSourcesContent>
+              <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
               <artifactSet>
                 <includes>
                   <include>*:*</include>
@@ -38,104 +39,95 @@
                 <excludes>
                   <exclude>org.slf4j:*</exclude>
                   <exclude>junit:junit</exclude>
+                  <exclude>org.bytedeco.javacpp-presets:*</exclude>
+                  <exclude>org.bytedeco:javacpp</exclude>
+                  <exclude>org.projectlombok:*</exclude>
                 </excludes>
               </artifactSet>
               <relocations>
                 <relocation>
-                  <pattern>org.nd4j</pattern>
-                  <shadedPattern>com.streamsimple.org.nd4j</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.deeplearning4j</pattern>
-                  <shadedPattern>com.streamsimple.org.deeplearning4j</shadedPattern>
-                </relocation>
-                <relocation>
                   <pattern>com.google</pattern>
-                  <shadedPattern>com.streamsimple.com.google</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.com.google</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.apache</pattern>
-                  <shadedPattern>com.streamsimple.org.apache</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.bytedeco</pattern>
-                  <shadedPattern>com.streamsimple.org.bytedeco</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.apache</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>com.twelvemonkeys</pattern>
-                  <shadedPattern>com.streamsimple.com.twelvemonkeys</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.com.twelvemonkeys</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>com.github</pattern>
-                  <shadedPattern>com.streamsimple.com.github</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.com.github</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.datavec</pattern>
-                  <shadedPattern>com.streamsimple.org.datavec</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.datavec</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>au.com.bytecode</pattern>
-                  <shadedPattern>com.streamsimple.au.com.bytecode</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.au.com.bytecode</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>it.unimi.dsi</pattern>
-                  <shadedPattern>com.streamsimple.it.unimi.dsi</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.it.unimi.dsi</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>com.clearspring</pattern>
-                  <shadedPattern>com.streamsimple.com.clearspring</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.com.clearspring</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>freemarker</pattern>
-                  <shadedPattern>com.streamsimple.freemarker</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.freemarker</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>cl.eye</pattern>
-                  <shadedPattern>com.streamsimple.cl.eye</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.cl.eye</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>lombok</pattern>
-                  <shadedPattern>com.streamsimple.lombok</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.lombok</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.joda</pattern>
-                  <shadedPattern>com.streamsimple.org.joda</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.joda</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.codehaus</pattern>
-                  <shadedPattern>com.streamsimple.org.codehaus</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.codehaus</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.yaml</pattern>
-                  <shadedPattern>com.streamsimple.org.yaml</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.yaml</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>javax.annotation</pattern>
-                  <shadedPattern>com.streamsimple.javax.annotation</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.javax.annotation</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>javassist</pattern>
-                  <shadedPattern>com.streamsimple.javassist</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.javassist</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.reflections</pattern>
-                  <shadedPattern>com.streamsimple.org.reflections</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.reflections</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>net.jcip</pattern>
-                  <shadedPattern>com.streamsimple.net.jcip</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.net.jcip</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>edu.umd</pattern>
-                  <shadedPattern>com.streamsimple.edu.umd</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.edu.umd</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.tukaani</pattern>
-                  <shadedPattern>com.streamsimple.org.tukaani</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.org.tukaani</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>net.ericaro</pattern>
-                  <shadedPattern>com.streamsimple.net.ericaro</shadedPattern>
+                  <shadedPattern>com.streamsimple.deeplearning4j.net.ericaro</shadedPattern>
                 </relocation>
               </relocations>
               <dependencyReducedPomLocation>target/reduced-pom.xml</dependencyReducedPomLocation>
@@ -160,6 +152,36 @@
       <groupId>org.deeplearning4j</groupId>
       <artifactId>deeplearning4j-core</artifactId>
       <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.bytedeco</groupId>
+          <artifactId>javacpp</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.deeplearning4j</groupId>
+      <artifactId>deeplearning4j-zoo</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.16</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bytedeco.javacpp-presets</groupId>
+      <artifactId>opencv</artifactId>
+      <version>3.2.0-1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bytedeco</groupId>
+      <artifactId>javacpp</artifactId>
+      <version>1.3.3</version>
     </dependency>
   </dependencies>
 </project>
