@@ -18,6 +18,7 @@
     <module>ss-commons-io</module>
     <module>ss-commons-lang3</module>
     <module>ss-guava</module>
+    <module>ss-deeplearning4j</module>
   </modules>
 
   <build>
