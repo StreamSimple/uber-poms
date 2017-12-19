@@ -18,6 +18,7 @@
     <java.debug>false</java.debug>
     <java.optimize>true</java.optimize>
     <licenseSkip>false</licenseSkip>
+    <excludedGroups></excludedGroups>
   </properties>
 
   <modules>
@@ -52,6 +53,7 @@
               <projectbasedir>${pom.basedir}</projectbasedir>
               <projectbuilddir>${project.basedir}</projectbuilddir>
             </environmentVariables>
+            <excludedGroups>${excludedGroups}</excludedGroups>
           </configuration>
         </plugin>
         <plugin>
