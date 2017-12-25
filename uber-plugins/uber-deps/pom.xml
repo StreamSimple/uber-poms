@@ -13,6 +13,10 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <properties>
+    <aws.version>1.11.224</aws.version>
+  </properties>
+
   <!-- The repositories are redefined here because IntelliJ cannot resolve repos from parent poms correctly -->
 
   <distributionManagement>
@@ -105,7 +109,7 @@
       <dependency>
         <groupId>com.amazonaws</groupId>
         <artifactId>aws-java-sdk-s3</artifactId>
-        <version>1.11.224</version>
+        <version>${aws.version}</version>
       </dependency>
       <dependency>
         <groupId>com.streamsimple.kafka</groupId>
