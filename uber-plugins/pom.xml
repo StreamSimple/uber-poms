@@ -18,6 +18,7 @@
     <java.debug>false</java.debug>
     <java.optimize>true</java.optimize>
     <licenseSkip>false</licenseSkip>
+    <protocExecutable>/usr/local/bin/protoc</protocExecutable>
     <excludedGroups></excludedGroups>
   </properties>
 
@@ -137,7 +138,7 @@
           <artifactId>protobuf-maven-plugin</artifactId>
           <version>0.5.1</version>
           <configuration>
-            <protocExecutable>/usr/local/bin/protoc</protocExecutable>
+            <protocExecutable>${protocExecutable}</protocExecutable>
           </configuration>
           <executions>
             <execution>
