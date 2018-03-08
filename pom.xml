@@ -26,7 +26,6 @@
     <dist.repo.snapshot.name>Snapshot Repository for StreamSimple</dist.repo.snapshot.name>
     <dist.repo.release.url>s3://streamsimple.pub.artifacts/release</dist.repo.release.url>
     <dist.repo.snapshot.url>s3://streamsimple.pub.artifacts/snapshot</dist.repo.snapshot.url>
-    <dist.s3.wagon.version>1.2.1</dist.s3.wagon.version>
   </properties>
 
   <distributionManagement>
