@@ -17,7 +17,8 @@
     <java.version>1.7</java.version>
     <java.debug>false</java.debug>
     <java.optimize>true</java.optimize>
-    <licenseSkip>false</licenseSkip>
+    <license.skip>false</license.skip>
+    <license.header>license/CopyrightHeader.txt</license.header>
     <protocExecutable>/usr/local/bin/protoc</protocExecutable>
     <excludedGroups></excludedGroups>
   </properties>
@@ -92,7 +93,7 @@
           <artifactId>license-maven-plugin</artifactId>
           <version>2.11</version>
           <configuration>
-            <header>license/CopyrightHeader.txt</header>
+            <header>${license.header}</header>
             <excludes>
               <exclude>**/README</exclude>
               <exclude>src/test/resources/*.csv</exclude>
@@ -115,7 +116,7 @@
               <java>SLASHSTAR_STYLE</java>
               <R>SCRIPT_STYLE</R>
             </mapping>
-            <skip>${licenseSkip}</skip>
+            <skip>${license.skip}</skip>
           </configuration>
           <executions>
             <execution>
