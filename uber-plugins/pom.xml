@@ -110,7 +110,7 @@
               <exclude>**/*.html</exclude>
               <exclude>**/*.sh</exclude>
               <exclude>**/*.xsd</exclude>
-              <exclude>Dockerfile</exclude>
+              <exclude>**/Dockerfile</exclude>
             </excludes>
             <mapping combine.children="append">
               <java>SLASHSTAR_STYLE</java>
