@@ -110,6 +110,7 @@
               <exclude>**/*.html</exclude>
               <exclude>**/*.sh</exclude>
               <exclude>**/*.xsd</exclude>
+              <exclude>**/*.sql</exclude>
               <exclude>**/Dockerfile</exclude>
             </excludes>
             <mapping combine.children="append">
